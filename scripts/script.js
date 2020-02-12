@@ -19,16 +19,16 @@
 //     alert('hello webpage');
 // }
 
-// let myImage = document.querySelector('img');
+ let myImage = document.querySelector('img');
 
-// myImage.onclick = function () {
-//     let mySrc = myImage.getAttribute('src');
-//     if (mySrc === 'images/chrome.png') {
-//         myImage.setAttribute('src', 'images/all-browser.png');
-//     } else {
-//         myImage.setAttribute('src', 'images/chrome.png');
-//     }
-// }
+ myImage.onclick = function () {
+    let mySrc = myImage.getAttribute('src');
+   if (mySrc === 'images/chrome.png') {
+        myImage.setAttribute('src', 'images/all-browser.png');
+    } else {
+       myImage.setAttribute('src', 'images/chrome.png');
+    }
+}
 
 // Adding a personalized welcome message
 
