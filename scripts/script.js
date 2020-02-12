@@ -19,14 +19,14 @@
 //     alert('hello webpage');
 // }
 
- let myImage = document.querySelector('img');
+let myImage = document.querySelector('img');
 
- myImage.onclick = function () {
+myImage.onclick = function () {
     let mySrc = myImage.getAttribute('src');
-   if (mySrc === 'images/chrome.png') {
-        myImage.setAttribute('src', 'images/all-browser.png');
+    if (mySrc === 'images/chrome.png') {
+        myImage.setAttribute('src', 'images/chrome-change.png');
     } else {
-       myImage.setAttribute('src', 'images/chrome.png');
+        myImage.setAttribute('src', 'images/chrome.png');
     }
 }
 
@@ -56,6 +56,31 @@ myButton.onclick = function () {
     setUserName();
 }
 
+
+let myBtn = document.querySelector('button');
+let myText = document.querySelector('h1');
+
+
+function setUserName() {
+    let myName = prompt("plese enter your name");
+    if (!myName || myName === null) {
+        setUserName();
+    } else {
+        localStorage.setItem('name', myName);
+        myText.textContent = 'Chrome is cool, ' + myText;
+    }
+}
+
+if (!localStorage.getItem('name')) {
+    setUserName();
+} else {
+    let storedName = localStorage.getItem('name');
+    myText.textContent = 'chrome is cool, ' + storedName;
+}
+
+myBtn.onclick = function () {
+    setUserName();
+}
 
 
 
